@@ -9,6 +9,7 @@ namespace PagedClasses.Utilities
 {
     static class Navigator
     {    
+        // this is a container 
         private static BasePage[] pages;
         static Navigator()
         {
