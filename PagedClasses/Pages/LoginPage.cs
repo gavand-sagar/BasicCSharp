@@ -25,7 +25,7 @@ namespace PagedClasses.Pages
             string input = Console.ReadLine();
             if (input == "y" || input == "Y")
             {
-                Navigator.NavigateToMain();
+                Navigator.NavigateTo(PageType.Main);
             }
         }
 

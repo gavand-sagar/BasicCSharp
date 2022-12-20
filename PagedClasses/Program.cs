@@ -13,7 +13,28 @@ namespace PagedClasses
         static void Main(string[] args)
         {
 
-            Navigator.NavigateTo(0);
+            Console.WriteLine("Enter number : ");
+            int a = 0;
+            try
+            {
+                int c = 56 / a;
+                int input = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Square = " + (input * input));
+            }
+            catch(DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
+
+            Console.ReadLine();
+
+            //Navigator.NavigateTo(0);
             
         }
     }
