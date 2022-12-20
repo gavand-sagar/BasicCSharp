@@ -17,16 +17,17 @@ namespace PagedClasses.Pages
             Console.WriteLine("Enter Choice");
             string input = Console.ReadLine();
 
-            Navigator.NavigateTo(int.Parse(input));
 
+            //PageType p = (PageType)1;
 
-            //if (input == "1")
-            //{
-            //}
-            //else if (input == "2")
-            //{
-            //    Navigator.NavigateTo(2);
-            //}
+            if (input == "1")
+            {
+                Navigator.NavigateTo(PageType.Login);
+            }
+            else if (input == "2")
+            {
+                Navigator.NavigateTo(PageType.Signup);
+            }
         }
     }
 }

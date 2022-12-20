@@ -7,12 +7,9 @@ using System.Threading.Tasks;
 
 namespace PagedClasses.Pages
 {
-    public class BasePage
+    public abstract class BasePage
     {
-        public virtual void Show()
-        {
-
-        }
+        public abstract void Show();
         public virtual void PromptMainPage()
         {
             Console.WriteLine("========BasePage============");
@@ -20,8 +17,14 @@ namespace PagedClasses.Pages
             string input = Console.ReadLine();
             if (input == "y" || input == "Y")
             {
-                Navigator.NavigateTo(0);
+                Navigator.NavigateTo(PageType.Main);
             }
         }
     }
+
+    //public interface BasePage
+    //{        
+    //    void Show();
+    //    void PromptMainPage();
+    //}
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,9 +16,9 @@ namespace PagedClasses.Utilities
         {
             pages = new BasePage[] { new MainPage(), new LoginPage(), new SignupPage() };
         }
-        public static void NavigateTo(int pageNumber)
+        public static void NavigateTo(PageType pageNumber)
         {
-            pages[pageNumber].Show();
+            pages[(int)pageNumber].Show();
         }
     }
 }
